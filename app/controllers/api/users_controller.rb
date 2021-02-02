@@ -12,6 +12,11 @@ class Api::UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end
+  # Implement the back end user authentication. Test it out by temporarily adding current_user as part of your show.json.jb, then adding the jwt from the Login request to the show request headers (Authorization => Bearer ___ ).
+  def show
+     
+     render "show.json.jb"
+  end
   
 
 end
